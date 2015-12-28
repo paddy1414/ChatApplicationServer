@@ -29,9 +29,9 @@ public interface UserCommandsInInterface extends Remote {
 
     public boolean login(String firstName,  String password) throws RemoteException;
 
-     public boolean sendPmMail(ChatMessage mail) throws RemoteException;
-    public ArrayList<ChatMessage> getPmSentEmails(String sender) throws RemoteException;
-    public ArrayList<ChatMessage> getPmReceivedEmails(String receiver) throws RemoteException;
+    // public boolean sendPmMail(ChatMessage mail) throws RemoteException;
+    // public ArrayList<ChatMessage> getPmSentEmails(String sender) throws RemoteException;
+  //  public ArrayList<ChatMessage> getPmReceivedEmails(String receiver) throws RemoteException;
     
     // CALLBACK METHODS
 

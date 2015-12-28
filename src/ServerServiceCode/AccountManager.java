@@ -122,48 +122,48 @@ public class AccountManager extends UnicastRemoteObject implements UserCommandsI
         }
     }
 
-    @Override
-    public boolean sendPmMail(ChatMessage mail) throws RemoteException {
-        if (!pmMessageList.contains(mail)) {
-            pmMessageList.add(mail);
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    @Override
-    public ArrayList<ChatMessage> getPmSentEmails(String sender) throws RemoteException {
-        ArrayList<ChatMessage> mails = new ArrayList();
-        for (ChatMessage e : pmMessageList) {
-            if (e.getFrom().equalsIgnoreCase(sender)) {
-                mails.add(e);
-            }
-        }
-        return mails;
-    }
-
-    @Override
-    public ArrayList<ChatMessage> getPmReceivedEmails(String receiver) throws RemoteException {
-        ArrayList<ChatMessage> mails = new ArrayList();
-        for (ChatMessage e : pmMessageList) {
-            if (e.getTo().equalsIgnoreCase(receiver)) {
-                mails.add(e);
-            }
-        }
-        return mails;
-    }
+//    @Override
+//    public boolean sendPmMail(ChatMessage mail) throws RemoteException {
+//        if (!pmMessageList.contains(mail)) {
+//            pmMessageList.add(mail);
+//            return true;
+//        } else {
+//            return false;
+//        }
+//    }
+//
+//    @Override
+//    public ArrayList<ChatMessage> getPmSentEmails(String sender) throws RemoteException {
+//        ArrayList<ChatMessage> mails = new ArrayList();
+//        for (ChatMessage e : pmMessageList) {
+//            if (e.getFrom().equalsIgnoreCase(sender)) {
+//                mails.add(e);
+//            }
+//        }
+//        return mails;
+//    }
+//
+//    @Override
+//    public ArrayList<ChatMessage> getPmReceivedEmails(String receiver) throws RemoteException {
+//        ArrayList<ChatMessage> mails = new ArrayList();
+//        for (ChatMessage e : pmMessageList) {
+//            if (e.getTo().equalsIgnoreCase(receiver)) {
+//                mails.add(e);
+//            }
+//        }
+//        return mails;
+//    }
     
         
     
    // Method to call back to EVERY client registered
     // and push updated voting results
-    public synchronized void pushUpdatedVoteInfo(String results) throws RemoteException
-    {
-        for(ChatClientCallback client : clients)
-        {
-            client.displayNotification(results);
-        }
-    }
+//    public synchronized void pushUpdatedVoteInfo(String results) throws RemoteException
+//    {
+//        for(ChatClientCallback client : clients)
+//        {
+//            client.displayNotification(results);
+//        }
+//    }
 
 }
