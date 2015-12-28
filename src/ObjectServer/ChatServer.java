@@ -37,7 +37,7 @@ public class ChatServer
             System.out.println("BankingServer ready.");
         }// end try
         catch (Exception re) {
-            System.out.println("Exception in BankingServer.main: " + re);
+            System.out.println("Exception in ChatServer.main: " + re);
         } // end catch
     } // end main
 
